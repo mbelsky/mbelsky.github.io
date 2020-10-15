@@ -1,0 +1,27 @@
+baseURL = "https://www.mbelsky.com/"
+languageCode = "en-us"
+title = "www.mbelsky.com"
+
+[params]
+    author = "Max Belsky"
+    mainSections = ["posts"]
+
+[markup.goldmark.renderer]
+    unsafe= true
+
+[[menu.social]]
+    name = "GitHub"
+    url = "https://github.com/mbelsky"
+    weight = 1
+[[menu.social]]
+    name = "Twitter"
+    url = "https://twitter.com/mbelsky_"
+    weight = 1
+[[menu.social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/mbelsky"
+    weight = 1
+[[menu.social]]
+    name = "public.belsky@gmail.com"
+    url = "mailto:public.belsky@gmail.com"
+    weight = 99

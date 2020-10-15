@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+<!-- <meta name="description" content={{ with .Description }}{{ . }}{{ end }}> -->
+{{ with .Site.Params.author }}
+<meta name="author" content={{ . }}>
+{{ end }}
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+<!-- https://gohugo.io/templates/internal/#open-graph -->
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+<!-- Also put CDN resources here -->

@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<h1>Max Belsky</h1>
+
+{{ with .Site.Menus.social }}
+<h2>Links</h2>
+
+<ul>
+  {{- range . -}}
+  <li><a class="social__link" href={{ .URL }}>{{ .Name }}</a></li>
+  {{- end -}}
+</ul>
+{{- end -}}
+
+{{ with where site.RegularPages "Type" "in" site.Params.mainSections }}
+<h2>Posts</h2>
+
+<ul>
+  {{- range . -}}
+  <li><a href={{ .Permalink }}>{{ .Title }}</a> <time class="posts__item__time"
+      datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "Jan 02, 2006" }}</time>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ end }}
