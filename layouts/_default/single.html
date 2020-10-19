@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="single__header">
+  <h1 class="single__title__h1">{{ .Title }}</h1>
+  <time
+    class="single__time"
+    datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "Jan 02, 2006" }}</time>
+</header>
+<main class="single__main">{{ .Content }}</main>
+{{ end }}

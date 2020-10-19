@@ -2,6 +2,9 @@ baseURL = "https://www.mbelsky.com/"
 languageCode = "en-us"
 title = "www.mbelsky.com"
 
+[taxonomies]
+    tag = "tags"
+
 [params]
     author = "Max Belsky"
     mainSections = ["posts"]
