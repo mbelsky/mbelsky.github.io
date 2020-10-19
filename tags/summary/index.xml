@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>www.mbelsky.com</title>
-    <link>https://www.mbelsky.com/</link>
-    <description>Recent content on www.mbelsky.com</description>
+    <title>summary on www.mbelsky.com</title>
+    <link>https://www.mbelsky.com/tags/summary/</link>
+    <description>Recent content in summary on www.mbelsky.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 19:06:13 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 19:06:13 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/summary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Summary: Web Api Design the Missing Link Ebook</title>
       <link>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</link>
