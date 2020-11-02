@@ -1,11 +1,12 @@
 ---
-title: "Summary: Web Api Design the Missing Link Ebook"
+title: "Summary: Web Api Design the Missing Link"
 date: 2020-10-19T19:06:13+03:00
+description: "My summary for Web Api Design the Missing Link"
 draft: false
 tags: ["summary", "api"]
 ---
 
-The book: [.PDF](https://cloud.google.com/files/apigee/apigee-web-api-design-the-missing-link-ebook.pdf)
+The ebook: [.PDF](https://cloud.google.com/files/apigee/apigee-web-api-design-the-missing-link-ebook.pdf)
 
 ## Relationship between models
 
