@@ -1,12 +1,13 @@
 baseURL = "https://www.mbelsky.com/"
 languageCode = "en-us"
-title = "www.mbelsky.com"
+title = "Max Belsky — a software developer and music lover"
 
 [taxonomies]
     tag = "tags"
 
 [params]
     author = "Max Belsky"
+    description = "The articles, notes and projects of Max Belsky, a software developer and music lover."
     mainSections = ["posts"]
 
 [markup.goldmark.renderer]
