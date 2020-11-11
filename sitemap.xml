@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.mbelsky.com/tags/api/</loc>
-    <lastmod>2020-10-19T19:06:13+03:00</lastmod>
+    <loc>https://www.mbelsky.com/tags/docker/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/posts/dockerizing-a-workspaced-nodejs-application/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.mbelsky.com/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/tags/node.js/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/posts/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/tags/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/tags/yarn/</loc>
+    <lastmod>2020-11-09T18:54:21+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.mbelsky.com/tags/api/</loc>
     <lastmod>2020-10-19T19:06:13+03:00</lastmod>
   </url>
   
@@ -24,11 +54,6 @@
   
   <url>
     <loc>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</loc>
-    <lastmod>2020-10-19T19:06:13+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.mbelsky.com/tags/</loc>
     <lastmod>2020-10-19T19:06:13+03:00</lastmod>
   </url>
   

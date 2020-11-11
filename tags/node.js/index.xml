@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node.js on Max Belsky — a software developer and music lover</title>
+    <link>https://www.mbelsky.com/tags/node.js/</link>
+    <description>Recent content in node.js on Max Belsky — a software developer and music lover</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Nov 2020 18:54:21 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dockerizing a Workspaced Node.js Application</title>
+      <link>https://www.mbelsky.com/posts/dockerizing-a-workspaced-nodejs-application/</link>
+      <pubDate>Mon, 09 Nov 2020 18:54:21 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/posts/dockerizing-a-workspaced-nodejs-application/</guid>
+      <description>Re-usage of build cache is one of the most important things in Docker images creating.
+To efficiently dockerize an app you need to split source code copying and dependencies installation in a few steps:
+ Copy dependencies files. Install dependencies. Copy source code.  For a node.js application these steps look like:
+COPY package.json yarn.lock ./RUN yarn installCOPY . .However, this solution does not work with yarn workspaced application because the root package.</description>
+    </item>
+    
+  </channel>
+</rss>

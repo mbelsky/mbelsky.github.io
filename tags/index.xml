@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Max Belsky — a software developer and music lover</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 19:06:13 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 18:54:21 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>https://www.mbelsky.com/tags/docker/</link>
+      <pubDate>Mon, 09 Nov 2020 18:54:21 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node.js</title>
+      <link>https://www.mbelsky.com/tags/node.js/</link>
+      <pubDate>Mon, 09 Nov 2020 18:54:21 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/tags/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yarn</title>
+      <link>https://www.mbelsky.com/tags/yarn/</link>
+      <pubDate>Mon, 09 Nov 2020 18:54:21 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/tags/yarn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>api</title>
       <link>https://www.mbelsky.com/tags/api/</link>
