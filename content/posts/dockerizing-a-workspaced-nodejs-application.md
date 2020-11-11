@@ -147,4 +147,4 @@ RUN yarn install --frozen-lockfile --production=true
 CMD ["yarn", "start"]
 ```
 
-<!-- Join the discussion if you have any comments or suggestions -->
+[Join the discussion](https://twitter.com/mbelsky_/status/1326542955989983238?s=20) if you have any comments or suggestions
