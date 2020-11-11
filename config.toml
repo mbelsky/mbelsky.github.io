@@ -8,6 +8,7 @@ title = "Max Belsky — a software developer and music lover"
 [params]
     author = "Max Belsky"
     description = "The articles, notes and projects of Max Belsky, a software developer and music lover."
+    images = ["android-chrome-192x192.png"]
     mainSections = ["posts"]
 
 [markup.goldmark.renderer]
