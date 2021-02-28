@@ -6,7 +6,19 @@
     <description>Recent content in Notes on Max Belsky — a software developer and music lover</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 19:06:13 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 16:26:02 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Serve React applicaiton with Nginx in k8s</title>
+      <link>https://www.mbelsky.com/notes/react-nginx-k8s/</link>
+      <pubDate>Sun, 28 Feb 2021 16:26:02 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/notes/react-nginx-k8s/</guid>
+      <description>A few things I&amp;rsquo;ve learned after deploying React application + nginx in Kubernetes.
+nobody user To run a process as non-root you don&amp;rsquo;t need create a user in your docker image. Just use the nobody:
+docker run --user=&amp;#34;nobody&amp;#34; nginx read-only container To succesfully run a read only container with nginx don&amp;rsquo;t forget to pass some volumes:
+docker run --read-only --tmpfs &amp;#34;/var/cache/nginx&amp;#34; --tmpfs &amp;#34;/run&amp;#34; --rm nginx-react-app In k8s add volumes and use them as the container&amp;rsquo;s volumeMounts.</description>
+    </item>
+    
     <item>
       <title>Summary: Web Api Design the Missing Link</title>
       <link>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</link>
@@ -18,6 +30,26 @@ Relationship between models Assume that there is a relationship between a dog an
 { &amp;#34;id&amp;#34;: &amp;#34;12345678&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Lassie&amp;#34;, &amp;#34;ownerID&amp;#34;: &amp;#34;98765432&amp;#34; // the relationship } A better way:
 { &amp;#34;id&amp;#34;: &amp;#34;12345678&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Lassie&amp;#34;, &amp;#34;ownerID&amp;#34;: &amp;#34;98765432&amp;#34;, &amp;#34;ownerLink&amp;#34;: &amp;#34;https://dogtracker.com/persons/1337&amp;#34; // Use links } The owner representation:
 { &amp;#34;id&amp;#34;: &amp;#34;98765432&amp;#34;, &amp;#34;kind&amp;#34;: &amp;#34;Person&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Joe Carraclough&amp;#34;, &amp;#34;dogsLink&amp;#34;: &amp;#34;https://dogtracker.com/persons/98765432/dogs&amp;#34; // 🐶 } Suppose dogs can be owned by either people or institutions (e.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.mbelsky.com/notes/commit-message-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mbelsky.com/notes/commit-message-guidelines/</guid>
+      <description>— https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html — https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing — http://who-t.blogspot.com/2009/12/on-commit-messages.html — https://wiki.openstack.org/wiki/GitCommitMessages</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.mbelsky.com/notes/summary-mastering-zsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mbelsky.com/notes/summary-mastering-zsh/</guid>
+      <description>(source)
+history Modifying the Last Command $ systemctl status service-name # replace status with restart $ ^status^restart # systemctl restart service-name # global $ echo foo foo $ ^foo^bar^:G # echo bar bar # also there is fc command aliases Automatically Expand Aliases 🤯 https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases
+# Search through your command history and print the top 10 commands alias history-stat=&#39;history 0 | awk &#39;&#39;{print $2}&#39;&#39; | sort | uniq -c | sort -n -r | head&#39; variables Keyword to search: Parameter Substitution</description>
     </item>
     
   </channel>
