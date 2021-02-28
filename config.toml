@@ -1,6 +1,7 @@
 baseURL = "https://www.mbelsky.com/"
 languageCode = "en-us"
 title = "Max Belsky — a software developer and music lover"
+enableRobotsTXT = true
 
 [taxonomies]
     tag = "tags"
@@ -12,7 +13,7 @@ title = "Max Belsky — a software developer and music lover"
     mainSections = ["posts"]
 
 [markup.goldmark.renderer]
-    unsafe= true
+    unsafe = true
 
 [[menu.social]]
     name = "GitHub"
