@@ -6,7 +6,28 @@
     <description>Recent content in Notes on Max Belsky — a software developer and music lover</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 16:26:02 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 17:29:04 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t Ask Backend Devs to Help With Cors</title>
+      <link>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</link>
+      <pubDate>Fri, 28 May 2021 17:29:04 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</guid>
+      <description>Webpack proxy This small config helps setup a proxy for projects bundled with Webpack:
+{ devServer: { proxy: { &amp;#39;/api&amp;#39;: { target: &amp;#39;https://www.mbelsky.com&amp;#39;, changeOrigin: true, cookieDomainRewrite: &amp;#39;localhost&amp;#39;, } } } } Nginx proxy This config works for apps served by Nginx:
+http { server { # … server_name localhost; location /api/ { proxy_cookie_domain www.mbelsky.com $server_name; proxy_http_version 1.1; proxy_pass https://www.mbelsky.com; proxy_ssl_server_name on; } location / { # serve frontend app&amp;#39;s static } } } For other cases setup Nginx proxy on another port, hide the original response header with proxy_hide_header and set the Access-Control-Allow-Origin header&amp;rsquo;s value with add_header:</description>
+    </item>
+    
+    <item>
+      <title>Software Engineer Behavioral Interview Questions</title>
+      <link>https://www.mbelsky.com/notes/behavioral-interview-questions/</link>
+      <pubDate>Mon, 12 Apr 2021 09:46:43 +0300</pubDate>
+      
+      <guid>https://www.mbelsky.com/notes/behavioral-interview-questions/</guid>
+      <description>A list of questions to prepare for a behavioral interview:
+ What were some of the best things you’ve built? What are you proud of? Tell me about a project that failed and what you learned from the experience. What were some excellent collaborations you’ve had? Tell me about a time when you advocated for and pushed your own ideas forward despite opposition? How do you deal with conflict? How do you like to give and receive feedback?</description>
+    </item>
+    
     <item>
       <title>Serve React applicaiton with Nginx in k8s</title>
       <link>https://www.mbelsky.com/notes/react-nginx-k8s/</link>
