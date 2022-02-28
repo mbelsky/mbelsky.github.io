@@ -10,24 +10,48 @@ enableRobotsTXT = true
     author = "Max Belsky"
     description = "The articles, notes and projects of Max Belsky, a software developer and music lover."
     images = ["android-chrome-192x192.png"]
-    mainSections = ["posts"]
 
 [markup.goldmark.renderer]
     unsafe = true
 
-[[menu.social]]
+[[Params.social]]
     name = "GitHub"
     url = "https://github.com/mbelsky"
-    weight = 1
-[[menu.social]]
-    name = "Twitter"
-    url = "https://twitter.com/mbelsky_"
-    weight = 1
-[[menu.social]]
+[[Params.social]]
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/mbelsky"
-    weight = 1
-[[menu.social]]
+[[Params.social]]
+    name = "Twitter"
+    url = "https://twitter.com/mbelsky_"
+[[Params.social]]
     name = "public.belsky@gmail.com"
     url = "mailto:public.belsky@gmail.com"
-    weight = 99
+
+[[Params.contributions]]
+    x-type = "article"
+    name = "Прокачать свою карьеру в ИТ: что такое менторство и как оно помогает освоить профессию"
+    url = "https://journal.tinkoff.ru/mentor/"
+[[Params.contributions]]
+    x-type = "article"
+    name = "The real difference between catch vs onRejected"
+    url = "https://www.freecodecamp.org/news/the-real-difference-between-catch-vs-onrejected-15cab8978e92/"
+[[Params.contributions]]
+    x-type = "code"
+    name = "storybookjs/storybook"
+    url = "https://github.com/storybookjs/storybook/commits?author=mbelsky"
+[[Params.contributions]]
+    x-type = "code"
+    name = "DefinitelyTyped/DefinitelyTyped"
+    url = "https://github.com/DefinitelyTyped/DefinitelyTyped/commits?author=mbelsky"
+[[Params.contributions]]
+    x-type = "code"
+    name = "facebook/jest"
+    url = "https://github.com/facebook/jest/commits?author=mbelsky"
+[[Params.contributions]]
+    x-type = "stackoverflow"
+    name = "How to detect if app is being built for device or simulator in Swift"
+    url = "https://stackoverflow.com/questions/24869481/how-to-detect-if-app-is-being-built-for-device-or-simulator-in-swift/37124071#37124071"
+[[Params.contributions]]
+    x-type = "stackoverflow"
+    name = "Docker COPY files using glob pattern?"
+    url = "https://stackoverflow.com/questions/49939960/docker-copy-files-using-glob-pattern/63142468#63142468"
