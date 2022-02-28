@@ -7,8 +7,6 @@
 <meta name="description" content="Recipe to efficiently dockerize yarn workspaced app" />
 
 
-<meta name="author" content=Max&#32;Belsky>
-
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,14 +20,12 @@
 <meta property="og:title" content="Dockerizing a Workspaced Node.js Application" />
 <meta property="og:description" content="Recipe to efficiently dockerize yarn workspaced app" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mbelsky.com/posts/dockerizing-a-workspaced-nodejs-application/" />
-<meta property="og:image" content="https://www.mbelsky.com/android-chrome-192x192.png"/>
+<meta property="og:url" content="https://www.mbelsky.com/posts/dockerizing-a-workspaced-nodejs-application/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-09T18:54:21+03:00" />
 <meta property="article:modified_time" content="2020-11-09T18:54:21+03:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.mbelsky.com/android-chrome-192x192.png"/>
 
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dockerizing a Workspaced Node.js Application"/>
 <meta name="twitter:description" content="Recipe to efficiently dockerize yarn workspaced app"/>
 
@@ -51,18 +47,18 @@
 <li>Copy source code.</li>
 </ol>
 <p>For a node.js application these steps look like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> package.json yarn.lock ./<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> package.json yarn.lock ./<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> yarn install<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>However, this solution does not work with yarn workspaced application because the root <code>package.json</code> and <code>yarn.lock</code> are not enough to install whole project dependencies.</p>
 <p>When I faced this task the first time I thought: what if I find all nested <code>package.json</code> files and copy them to a <code>src</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> src/**/package.json src/<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> src/**/package.json src/<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p><code>src/**/package.json</code> pattern matches all <code>package.json</code>&rsquo;s that I need. But <a href="https://docs.docker.com/engine/reference/builder/#copy"><code>COPY</code></a> works as not I expected. And instead of the expected directories structure I&rsquo;ve got a single file under the <code>src</code>.</p>
 <details>
 <summary>Expand to see trees examples</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># The original project&#39;s tree</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># The original project&#39;s tree</span>
 app
 ├── package.json
 ├── src
@@ -103,7 +99,7 @@ app
 <h2 id="multi-stage-builds-solution">Multi-stage builds solution</h2>
 <p>At some point, I thought of <a href="https://docs.docker.com/develop/develop-images/multistage-build/">multi-stage builds</a>. I used it in another project to build a tiny production image. &ldquo;What if I will prepare the tree on a first stage and copy it on a second stage?&rdquo;</p>
 <p>In addition to the root <code>package.json</code> and <code>yarn.lock</code> files I copied the <code>src</code> directory and removed all not <code>package.json</code> files:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> package.json yarn.lock ./<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> package.json yarn.lock ./<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> src src<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Remove not &#34;package.json&#34; files</span><span style="color:#960050;background-color:#1e0010">
@@ -113,16 +109,16 @@ app
 </span><span style="color:#ae81ff"></span>  -print <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  | xargs rm -rf<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>On a second stage I copied the tree and installed dependencies:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> /app .<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> /app .<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> yarn install --frozen-lockfile --production<span style="color:#f92672">=</span>true<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Under the hood <code>yarn workspaces</code> use symlinks. So it&rsquo;s important to create them after copying <code>src</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Restore workspaces symlinks</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> yarn install --frozen-lockfile --production<span style="color:#f92672">=</span>true<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><h2 id="the-final-solution-dockerfile">The final solution Dockerfile</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:14.15.0-alpine3.10</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:14.15.0-alpine3.10</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> package.json yarn.lock ./<span style="color:#960050;background-color:#1e0010">
