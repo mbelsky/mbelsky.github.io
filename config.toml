@@ -6,9 +6,9 @@ enableRobotsTXT = true
 [taxonomies]
     tag = "tags"
 
-[params]
+[Params]
     author = "Max Belsky"
-    description = "The articles, notes and projects of Max Belsky, a software developer and music lover."
+    description = "Articles, notes and projects by Max Belsky, a software developer and music lover."
     images = ["android-chrome-192x192.png"]
 
 [markup.goldmark.renderer]
