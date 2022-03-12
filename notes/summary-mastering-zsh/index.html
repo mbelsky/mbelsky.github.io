@@ -1,52 +1,39 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-<title>Max Belsky — a software developer and music lover</title>
-<meta name="description" content="" />
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/styles.css">
-
-
-<meta property="og:title" content="" />
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title> | Max Belsky</title>
+<meta name=description content="Articles, notes and projects by Max Belsky, a software developer and music lover.">
+<meta name=author content="Max Belsky">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=stylesheet href=/css/reset.css>
+<link rel=stylesheet href=/css/styles.css>
+<meta property="og:title" content>
 <meta property="og:description" content="(source)
 history Modifying the Last Command $ systemctl status service-name # replace status with restart $ ^status^restart # systemctl restart service-name # global $ echo foo foo $ ^foo^bar^:G # echo bar bar # also there is fc command aliases Automatically Expand Aliases 🤯 https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases
-# Search through your command history and print the top 10 commands alias history-stat=&#39;history 0 | awk &#39;&#39;{print $2}&#39;&#39; | sort | uniq -c | sort -n -r | head&#39; variables Keyword to search: Parameter Substitution" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mbelsky.com/notes/summary-mastering-zsh/" /><meta property="article:section" content="notes" />
-
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="(source)
+# Search through your command history and print the top 10 commands alias history-stat='history 0 | awk ''{print $2}'' | sort | uniq -c | sort -n -r | head' variables Keyword to search: Parameter Substitution">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.mbelsky.com/notes/summary-mastering-zsh/"><meta property="og:image" content="https://www.mbelsky.com/android-chrome-192x192.png"><meta property="article:section" content="notes">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://www.mbelsky.com/android-chrome-192x192.png">
+<meta name=twitter:title content>
+<meta name=twitter:description content="(source)
 history Modifying the Last Command $ systemctl status service-name # replace status with restart $ ^status^restart # systemctl restart service-name # global $ echo foo foo $ ^foo^bar^:G # echo bar bar # also there is fc command aliases Automatically Expand Aliases 🤯 https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases
-# Search through your command history and print the top 10 commands alias history-stat=&#39;history 0 | awk &#39;&#39;{print $2}&#39;&#39; | sort | uniq -c | sort -n -r | head&#39; variables Keyword to search: Parameter Substitution"/>
-
-
-
+# Search through your command history and print the top 10 commands alias history-stat='history 0 | awk ''{print $2}'' | sort | uniq -c | sort -n -r | head' variables Keyword to search: Parameter Substitution">
+</head>
 <body>
-    <div id="content">
-<header class="single__header">
-  <h1 class="single__title__h1"></h1>
-  <time
-    class="single__time"
-    datetime=0001-01-01>Jan 01, 0001</time>
+<div id=content>
+<header class=single__header>
+<h1 class=single__title__h1></h1>
+<time class=single__time datetime=0001-01-01>Jan 01, 0001</time>
 </header>
-<main class="single__main"><p>(<a href="https://github.com/rothgar/mastering-zsh/blob/master">source</a>)</p>
-<h2 id="history">history</h2>
-<h3 id="modifying-the-last-command">Modifying the Last Command</h3>
-<pre tabindex="0"><code>$ systemctl status service-name
+<main class=single__main><p>(<a href=https://github.com/rothgar/mastering-zsh/blob/master>source</a>)</p>
+<h2 id=history>history</h2>
+<h3 id=modifying-the-last-command>Modifying the Last Command</h3>
+<pre tabindex=0><code>$ systemctl status service-name
 
 # replace status with restart
 $ ^status^restart # systemctl restart service-name
@@ -56,25 +43,25 @@ $ echo foo foo
 $ ^foo^bar^:G # echo bar bar
 
 # also there is fc command
-</code></pre><h2 id="aliases">aliases</h2>
-<h3 id="automatically-expand-aliases">Automatically Expand Aliases</h3>
-<p>🤯 <a href="https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases">https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases</a></p>
-<pre tabindex="0"><code># Search through your command history and print the top 10 commands
+</code></pre><h2 id=aliases>aliases</h2>
+<h3 id=automatically-expand-aliases>Automatically Expand Aliases</h3>
+<p>🤯 <a href=https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases>https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases</a></p>
+<pre tabindex=0><code># Search through your command history and print the top 10 commands
 alias history-stat='history 0 | awk ''{print $2}'' | sort | uniq -c | sort -n -r | head'
-</code></pre><h2 id="variables">variables</h2>
+</code></pre><h2 id=variables>variables</h2>
 <p>Keyword to search: <code>Parameter Substitution</code></p>
 </main>
 </div>
-    <footer>
-  <hr>
-  <div class="footer__links">
-    <a href="/">Home</a>
-  </div>
-  <span class="footer__license">
-    All code in this site is licensed under the MIT
-    license. All other content is licensed under the
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-    license.</span>
+<footer>
+<hr>
+<div class=footer__links>
+<a href=/>Home</a>
+</div>
+<span class=footer__license>
+All code in this site is licensed under the MIT
+license. All other content is licensed under the
+<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC BY-NC-SA 4.0</a>
+license.</span>
 </footer>
 </body>
 </html>

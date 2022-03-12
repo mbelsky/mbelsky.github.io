@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>interview on Max Belsky — a software developer and music lover</title>
-    <link>https://www.mbelsky.com/tags/interview/</link>
-    <description>Recent content in interview on Max Belsky — a software developer and music lover</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 12 Apr 2021 09:46:43 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/interview/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Software Engineer Behavioral Interview Questions</title>
-      <link>https://www.mbelsky.com/notes/behavioral-interview-questions/</link>
-      <pubDate>Mon, 12 Apr 2021 09:46:43 +0300</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/behavioral-interview-questions/</guid>
-      <description>A list of questions to prepare for a behavioral interview:
- What were some of the best things you’ve built? What are you proud of? Tell me about a project that failed and what you learned from the experience. What were some excellent collaborations you’ve had? Tell me about a time when you advocated for and pushed your own ideas forward despite opposition? How do you deal with conflict? How do you like to give and receive feedback?</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>interview on Max Belsky — a software developer and music lover</title><link>https://www.mbelsky.com/tags/interview/</link><description>Recent content in interview on Max Belsky — a software developer and music lover</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 12 Apr 2021 09:46:43 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/tags/interview/index.xml" rel="self" type="application/rss+xml"/><item><title>Software Engineer Behavioral Interview Questions</title><link>https://www.mbelsky.com/notes/behavioral-interview-questions/</link><pubDate>Mon, 12 Apr 2021 09:46:43 +0300</pubDate><guid>https://www.mbelsky.com/notes/behavioral-interview-questions/</guid><description>A list of questions to prepare for a behavioral interview:
+What were some of the best things you’ve built? What are you proud of? Tell me about a project that failed and what you learned from the experience. What were some excellent collaborations you’ve had? Tell me about a time when you advocated for and pushed your own ideas forward despite opposition? How do you deal with conflict? How do you like to give and receive feedback?</description></item></channel></rss>

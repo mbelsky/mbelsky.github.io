@@ -1,95 +1,84 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-<title>Don&#39;t Ask Backend Devs to Help With Cors | Max Belsky — a software developer and music lover</title>
-<meta name="description" content="An alternative solution how to fix the CORS errors with proxy" />
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/styles.css">
-
-
-<meta property="og:title" content="Don&#39;t Ask Backend Devs to Help With Cors" />
-<meta property="og:description" content="An alternative solution how to fix the CORS errors with proxy" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/" /><meta property="article:section" content="notes" />
-<meta property="article:published_time" content="2021-05-28T17:29:04+03:00" />
-<meta property="article:modified_time" content="2021-05-28T17:29:04+03:00" />
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Don&#39;t Ask Backend Devs to Help With Cors"/>
-<meta name="twitter:description" content="An alternative solution how to fix the CORS errors with proxy"/>
-
-
-
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Don't Ask Backend Devs to Help With Cors | Max Belsky</title>
+<meta name=description content="An alternative solution how to fix the CORS errors with proxy">
+<meta name=author content="Max Belsky">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=stylesheet href=/css/reset.css>
+<link rel=stylesheet href=/css/styles.css>
+<meta property="og:title" content="Don't Ask Backend Devs to Help With Cors">
+<meta property="og:description" content="An alternative solution how to fix the CORS errors with proxy">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/"><meta property="og:image" content="https://www.mbelsky.com/android-chrome-192x192.png"><meta property="article:section" content="notes">
+<meta property="article:published_time" content="2021-05-28T17:29:04+03:00">
+<meta property="article:modified_time" content="2021-05-28T17:29:04+03:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://www.mbelsky.com/android-chrome-192x192.png">
+<meta name=twitter:title content="Don't Ask Backend Devs to Help With Cors">
+<meta name=twitter:description content="An alternative solution how to fix the CORS errors with proxy">
+</head>
 <body>
-    <div id="content">
-<header class="single__header">
-  <h1 class="single__title__h1">Don&#39;t Ask Backend Devs to Help With Cors</h1>
-  <time
-    class="single__time"
-    datetime=2021-05-28>May 28, 2021</time>
+<div id=content>
+<header class=single__header>
+<h1 class=single__title__h1>Don't Ask Backend Devs to Help With Cors</h1>
+<time class=single__time datetime=2021-05-28>May 28, 2021</time>
 </header>
-<main class="single__main"><h2 id="webpack-proxy">Webpack proxy</h2>
+<main class=single__main><h2 id=webpack-proxy>Webpack proxy</h2>
 <p>This small config helps setup a proxy for projects bundled with Webpack:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">proxy</span><span style="color:#f92672">:</span> {
-      <span style="color:#e6db74">&#39;/api&#39;</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://www.mbelsky.com&#39;</span>,
-        <span style="color:#a6e22e">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-        <span style="color:#a6e22e">cookieDomainRewrite</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;localhost&#39;</span>,
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>{
+  <span style=color:#a6e22e>devServer</span><span style=color:#f92672>:</span> {
+    <span style=color:#a6e22e>proxy</span><span style=color:#f92672>:</span> {
+      <span style=color:#e6db74>&#39;/api&#39;</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>target</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;https://www.mbelsky.com&#39;</span>,
+        <span style=color:#a6e22e>changeOrigin</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+        <span style=color:#a6e22e>cookieDomainRewrite</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;localhost&#39;</span>,
       }
     }
   }
 }
-</code></pre></div><h2 id="nginx-proxy">Nginx proxy</h2>
+</code></pre></div><h2 id=nginx-proxy>Nginx proxy</h2>
 <p>This config works for apps served by Nginx:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">http {</span>
-  <span style="color:#a6e22e">server {</span>
-    <span style="color:#75715e"># …</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cfg data-lang=cfg><span style=color:#a6e22e>http {</span>
+  <span style=color:#a6e22e>server {</span>
+    <span style=color:#75715e># …</span>
 
-    <span style="color:#a6e22e">server_name localhost;</span>
+    <span style=color:#a6e22e>server_name localhost;</span>
 
-    <span style="color:#a6e22e">location /api/ {</span>
-      <span style="color:#a6e22e">proxy_cookie_domain www.mbelsky.com $server_name;</span>
-      <span style="color:#a6e22e">proxy_http_version 1.1;</span>
-      <span style="color:#a6e22e">proxy_pass https://www.mbelsky.com;</span>
-      <span style="color:#a6e22e">proxy_ssl_server_name on;</span>
-    <span style="color:#a6e22e">}</span>
+    <span style=color:#a6e22e>location /api/ {</span>
+      <span style=color:#a6e22e>proxy_cookie_domain www.mbelsky.com $server_name;</span>
+      <span style=color:#a6e22e>proxy_http_version 1.1;</span>
+      <span style=color:#a6e22e>proxy_pass https://www.mbelsky.com;</span>
+      <span style=color:#a6e22e>proxy_ssl_server_name on;</span>
+    <span style=color:#a6e22e>}</span>
 
-    <span style="color:#a6e22e">location / {</span>
-      <span style="color:#75715e"># serve frontend app&#39;s static</span>
-    <span style="color:#a6e22e">}</span>
-  <span style="color:#a6e22e">}</span>
-<span style="color:#a6e22e">}</span>
-</code></pre></div><p>For other cases setup Nginx proxy on another port, hide the original response header with <a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_hide_header"><code>proxy_hide_header</code></a> and set the <code>Access-Control-Allow-Origin</code> header&rsquo;s value with <a href="http://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header"><code>add_header</code></a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">location /api/ {</span>
-  <span style="color:#75715e"># …</span>
-  <span style="color:#a6e22e">proxy_hide_header Access-Control-Allow-Origin;</span>
-  <span style="color:#a6e22e">add_header Access-Control-Allow-Origin * always;</span>
-<span style="color:#a6e22e">}</span>
+    <span style=color:#a6e22e>location / {</span>
+      <span style=color:#75715e># serve frontend app&#39;s static</span>
+    <span style=color:#a6e22e>}</span>
+  <span style=color:#a6e22e>}</span>
+<span style=color:#a6e22e>}</span>
+</code></pre></div><p>For other cases setup Nginx proxy on another port, hide the original response header with <a href=https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_hide_header><code>proxy_hide_header</code></a> and set the <code>Access-Control-Allow-Origin</code> header&rsquo;s value with <a href=http://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header><code>add_header</code></a>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cfg data-lang=cfg><span style=color:#a6e22e>location /api/ {</span>
+  <span style=color:#75715e># …</span>
+  <span style=color:#a6e22e>proxy_hide_header Access-Control-Allow-Origin;</span>
+  <span style=color:#a6e22e>add_header Access-Control-Allow-Origin * always;</span>
+<span style=color:#a6e22e>}</span>
 </code></pre></div></main>
 </div>
-    <footer>
-  <hr>
-  <div class="footer__links">
-    <a href="/">Home</a>
-  </div>
-  <span class="footer__license">
-    All code in this site is licensed under the MIT
-    license. All other content is licensed under the
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-    license.</span>
+<footer>
+<hr>
+<div class=footer__links>
+<a href=/>Home</a>
+</div>
+<span class=footer__license>
+All code in this site is licensed under the MIT
+license. All other content is licensed under the
+<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC BY-NC-SA 4.0</a>
+license.</span>
 </footer>
 </body>
 </html>

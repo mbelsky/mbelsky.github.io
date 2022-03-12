@@ -1,77 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Notes on Max Belsky — a software developer and music lover</title>
-    <link>https://www.mbelsky.com/notes/</link>
-    <description>Recent content in Notes on Max Belsky — a software developer and music lover</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 28 May 2021 17:29:04 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Don&#39;t Ask Backend Devs to Help With Cors</title>
-      <link>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</link>
-      <pubDate>Fri, 28 May 2021 17:29:04 +0300</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</guid>
-      <description>Webpack proxy This small config helps setup a proxy for projects bundled with Webpack:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on Max Belsky — a software developer and music lover</title><link>https://www.mbelsky.com/notes/</link><description>Recent content in Notes on Max Belsky — a software developer and music lover</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 17:29:04 +0300</lastBuildDate><atom:link href="https://www.mbelsky.com/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Don't Ask Backend Devs to Help With Cors</title><link>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</link><pubDate>Fri, 28 May 2021 17:29:04 +0300</pubDate><guid>https://www.mbelsky.com/notes/dont-ask-backend-devs-to-help-with-cors/</guid><description>Webpack proxy This small config helps setup a proxy for projects bundled with Webpack:
 { devServer: { proxy: { &amp;#39;/api&amp;#39;: { target: &amp;#39;https://www.mbelsky.com&amp;#39;, changeOrigin: true, cookieDomainRewrite: &amp;#39;localhost&amp;#39;, } } } } Nginx proxy This config works for apps served by Nginx:
-http { server { # … server_name localhost; location /api/ { proxy_cookie_domain www.mbelsky.com $server_name; proxy_http_version 1.1; proxy_pass https://www.mbelsky.com; proxy_ssl_server_name on; } location / { # serve frontend app&amp;#39;s static } } } For other cases setup Nginx proxy on another port, hide the original response header with proxy_hide_header and set the Access-Control-Allow-Origin header&amp;rsquo;s value with add_header:</description>
-    </item>
-    
-    <item>
-      <title>Software Engineer Behavioral Interview Questions</title>
-      <link>https://www.mbelsky.com/notes/behavioral-interview-questions/</link>
-      <pubDate>Mon, 12 Apr 2021 09:46:43 +0300</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/behavioral-interview-questions/</guid>
-      <description>A list of questions to prepare for a behavioral interview:
- What were some of the best things you’ve built? What are you proud of? Tell me about a project that failed and what you learned from the experience. What were some excellent collaborations you’ve had? Tell me about a time when you advocated for and pushed your own ideas forward despite opposition? How do you deal with conflict? How do you like to give and receive feedback?</description>
-    </item>
-    
-    <item>
-      <title>Serve React applicaiton with Nginx in k8s</title>
-      <link>https://www.mbelsky.com/notes/react-nginx-k8s/</link>
-      <pubDate>Sun, 28 Feb 2021 16:26:02 +0300</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/react-nginx-k8s/</guid>
-      <description>A few things I&amp;rsquo;ve learned after deploying React application + nginx in Kubernetes.
+http { server { # … server_name localhost; location /api/ { proxy_cookie_domain www.mbelsky.com $server_name; proxy_http_version 1.1; proxy_pass https://www.mbelsky.com; proxy_ssl_server_name on; } location / { # serve frontend app&amp;#39;s static } } } For other cases setup Nginx proxy on another port, hide the original response header with proxy_hide_header and set the Access-Control-Allow-Origin header&amp;rsquo;s value with add_header:</description></item><item><title>Software Engineer Behavioral Interview Questions</title><link>https://www.mbelsky.com/notes/behavioral-interview-questions/</link><pubDate>Mon, 12 Apr 2021 09:46:43 +0300</pubDate><guid>https://www.mbelsky.com/notes/behavioral-interview-questions/</guid><description>A list of questions to prepare for a behavioral interview:
+What were some of the best things you’ve built? What are you proud of? Tell me about a project that failed and what you learned from the experience. What were some excellent collaborations you’ve had? Tell me about a time when you advocated for and pushed your own ideas forward despite opposition? How do you deal with conflict? How do you like to give and receive feedback?</description></item><item><title>Serve React applicaiton with Nginx in k8s</title><link>https://www.mbelsky.com/notes/react-nginx-k8s/</link><pubDate>Sun, 28 Feb 2021 16:26:02 +0300</pubDate><guid>https://www.mbelsky.com/notes/react-nginx-k8s/</guid><description>A few things I&amp;rsquo;ve learned after deploying React application + nginx in Kubernetes.
 nobody user To run a process as non-root you don&amp;rsquo;t need create a user in your docker image. Just use the nobody:
 docker run --user=&amp;#34;nobody&amp;#34; nginx read-only container To succesfully run a read only container with nginx don&amp;rsquo;t forget to pass some volumes:
-docker run --read-only --tmpfs &amp;#34;/var/cache/nginx&amp;#34; --tmpfs &amp;#34;/run&amp;#34; --rm nginx-react-app In k8s add volumes and use them as the container&amp;rsquo;s volumeMounts.</description>
-    </item>
-    
-    <item>
-      <title>Summary: Web Api Design the Missing Link</title>
-      <link>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</link>
-      <pubDate>Mon, 19 Oct 2020 19:06:13 +0300</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</guid>
-      <description>The ebook: .PDF
+docker run --read-only --tmpfs &amp;#34;/var/cache/nginx&amp;#34; --tmpfs &amp;#34;/run&amp;#34; --rm nginx-react-app In k8s add volumes and use them as the container&amp;rsquo;s volumeMounts.</description></item><item><title>Summary: Web Api Design the Missing Link</title><link>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</link><pubDate>Mon, 19 Oct 2020 19:06:13 +0300</pubDate><guid>https://www.mbelsky.com/notes/apigee-web-api-design-the-missing-link-ebook/</guid><description>The ebook: .PDF
 Relationship between models Assume that there is a relationship between a dog and its owner. A popular way to represent it:
 { &amp;#34;id&amp;#34;: &amp;#34;12345678&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Lassie&amp;#34;, &amp;#34;ownerID&amp;#34;: &amp;#34;98765432&amp;#34; // the relationship } A better way:
 { &amp;#34;id&amp;#34;: &amp;#34;12345678&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Lassie&amp;#34;, &amp;#34;ownerID&amp;#34;: &amp;#34;98765432&amp;#34;, &amp;#34;ownerLink&amp;#34;: &amp;#34;https://dogtracker.com/persons/1337&amp;#34; // Use links } The owner representation:
-{ &amp;#34;id&amp;#34;: &amp;#34;98765432&amp;#34;, &amp;#34;kind&amp;#34;: &amp;#34;Person&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Joe Carraclough&amp;#34;, &amp;#34;dogsLink&amp;#34;: &amp;#34;https://dogtracker.com/persons/98765432/dogs&amp;#34; // 🐶 } Suppose dogs can be owned by either people or institutions (e.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.mbelsky.com/notes/commit-message-guidelines/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/commit-message-guidelines/</guid>
-      <description>— https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html — https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing — http://who-t.blogspot.com/2009/12/on-commit-messages.html — https://wiki.openstack.org/wiki/GitCommitMessages</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.mbelsky.com/notes/summary-mastering-zsh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mbelsky.com/notes/summary-mastering-zsh/</guid>
-      <description>(source)
+{ &amp;#34;id&amp;#34;: &amp;#34;98765432&amp;#34;, &amp;#34;kind&amp;#34;: &amp;#34;Person&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Joe Carraclough&amp;#34;, &amp;#34;dogsLink&amp;#34;: &amp;#34;https://dogtracker.com/persons/98765432/dogs&amp;#34; // 🐶 } Suppose dogs can be owned by either people or institutions (e.</description></item><item><title/><link>https://www.mbelsky.com/notes/commit-message-guidelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.mbelsky.com/notes/commit-message-guidelines/</guid><description>— https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html — https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing — http://who-t.blogspot.com/2009/12/on-commit-messages.html — https://wiki.openstack.org/wiki/GitCommitMessages</description></item><item><title/><link>https://www.mbelsky.com/notes/summary-mastering-zsh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.mbelsky.com/notes/summary-mastering-zsh/</guid><description>(source)
 history Modifying the Last Command $ systemctl status service-name # replace status with restart $ ^status^restart # systemctl restart service-name # global $ echo foo foo $ ^foo^bar^:G # echo bar bar # also there is fc command aliases Automatically Expand Aliases 🤯 https://github.com/rothgar/mastering-zsh/blob/master/docs/helpers/aliases.md#automatically-expand-aliases
-# Search through your command history and print the top 10 commands alias history-stat=&#39;history 0 | awk &#39;&#39;{print $2}&#39;&#39; | sort | uniq -c | sort -n -r | head&#39; variables Keyword to search: Parameter Substitution</description>
-    </item>
-    
-  </channel>
-</rss>
+# Search through your command history and print the top 10 commands alias history-stat='history 0 | awk ''{print $2}'' | sort | uniq -c | sort -n -r | head' variables Keyword to search: Parameter Substitution</description></item></channel></rss>
