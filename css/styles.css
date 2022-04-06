@@ -1,10 +1,14 @@
 :root {
-  --font: 16px / 1.2 monospace;
-  --font-size-h1: 32px;
-  --font-size-h2: 24px;
+  --font: 1.6rem / 1.2 monospace;
+  --font-size-h1: 3.2rem;
+  --font-size-h2: 2.4rem;
   --header-bg: #ccc;
   --text-primary: #333;
   --text-secondary: #666;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -27,8 +31,8 @@ body {
 @media (min-width: 768px) {
   body {
     padding: 0;
-    padding-left: 4rem;
-    max-width: 600px;
+    padding-left: 6.4rem;
+    max-width: min(60rem, 60%);
   }
 }
 
@@ -45,7 +49,7 @@ h2 {
 }
 
 footer {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 footer > hr {
@@ -76,7 +80,7 @@ footer > hr {
 }
 
 .footer__license {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
 }
 
 /* index.html */
@@ -84,7 +88,7 @@ footer > hr {
 .posts__item__time,
 .single__time {
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   white-space: nowrap;
 }
 
@@ -95,7 +99,7 @@ footer > hr {
 }
 
 .single__header {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .single__main > p > code {
