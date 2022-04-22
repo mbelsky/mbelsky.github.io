@@ -51,6 +51,14 @@ enableRobotsTXT = true
     name = "facebook/jest"
     url = "https://github.com/facebook/jest/commits?author=mbelsky"
 [[Params.contributions]]
+    x-type = "code"
+    name = "reduxjs/react-redux"
+    url = "https://github.com/reduxjs/react-redux/pull/1809"
+[[Params.contributions]]
+    x-type = "code"
+    name = "microsoft/vscode"
+    url = "https://github.com/microsoft/vscode/commits?author=mbelsky"
+[[Params.contributions]]
     x-type = "stackoverflow"
     name = "How to detect if app is being built for device or simulator in Swift"
     url = "https://stackoverflow.com/questions/24869481/how-to-detect-if-app-is-being-built-for-device-or-simulator-in-swift/37124071#37124071"
