@@ -8,7 +8,7 @@
 <ul>
   {{- range . -}}
   <!-- {{ printf "%#v" . }} -->
-  <li><a href={{ .url }}>{{ .name }}</a></li>
+  <li><a href={{ .url }} target="_blank">{{ .name }}</a></li>
   {{- end -}}
 </ul>
 {{- end -}}
@@ -18,7 +18,7 @@
 
 <ul>
   {{- range sort . "x-type" "desc" -}}
-  <li><a href={{ .url }}>{{ .name }}</a></li>
+  <li><a href={{ .url }} target="_blank">{{ .name }}</a></li>
   {{- end -}}
 </ul>
 {{- end -}}
