@@ -83,6 +83,11 @@ footer > hr {
   font-size: 1.4rem;
 }
 
+td:not(:first-of-type),
+th:not(:first-of-type) {
+  padding-inline-start: 1rem;
+}
+
 /* index.html */
 
 .posts__item__time,
