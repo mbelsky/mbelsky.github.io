@@ -1,7 +1,7 @@
 ---
 title: "Climbing Essentials: My First Gear Kit"
 date: 2022-12-08T22:49:08+01:00
-lastmod: 2022-12-12T22:12:42+01:00
+lastmod: 2023-03-25T06:48:51+01:00
 draft: false
 tags: ["climbing", "gear"]
 ---
@@ -28,9 +28,14 @@ But sometimes in the process of belaying I faced situations when GriGri moved to
 
 Because of that I decided to try Simond Rocky M Carabiner.
 
-To be bought:
+And then after a few months I had chance to join an outdoor climbing trip. So it was time to prepare for it and buy more equipment.
 
-- anchor kit
-- (?) belaying glasses
-- helmet
-- quickdraws
+| Item                                      |    Date     | Cost (czk) |
+| :---------------------------------------- | :---------: | ---------: |
+| Beal Zenith 9,5mm 80m                     | 21 Mar 2023 |       3679 |
+| BLACK DIAMOND HOTWIRE QUICKPACK 12 CM 6pc | 23 Mar 2023 |   1641 x 3 |
+| OCÚN O-SLING DYN 11 120CM                 | 23 Mar 2023 |        226 |
+| Ocún Eagle HMS Screw                      | 23 Mar 2023 |        284 |
+| Mammut CRAG SENDER HELMET                 | 23 Mar 2023 |       1699 |
+| Rock Empire Maillon O                     | 23 Mar 2023 |    151 x 2 |
+| Alpenverein Austria Membership            | 24 Mar 2023 |      66eur |
