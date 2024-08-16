@@ -56,6 +56,10 @@ enableRobotsTXT = true
     url = "https://github.com/reduxjs/react-redux/pull/1809"
 [[Params.contributions]]
     x-type = "code"
+    name = "palantir/tslint"
+    url = "https://github.com/palantir/tslint/pull/4475"
+[[Params.contributions]]
+    x-type = "code"
     name = "microsoft/vscode"
     url = "https://github.com/microsoft/vscode/commits?author=mbelsky"
 [[Params.contributions]]
